@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Label printing wizard form -->
+        <record id="mrp_label_wizard_view" model="ir.ui.view">
+            <field name="name">Manufacture Order Labels</field>
+            <field name="model">mrp.label_printer.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Print product labels">
+                    <separator string="Manufacturing Order"/>
+                    <h2><field name="manufacture_order"/></h2>
+                    <group>
+                        <field name="product"/>
+                        <field name="product_quantity"/>
+                        <field name="manufacture_date"/>
+                    </group>
+                    <separator string="Label Printing"/>
+                    <group>
+                        <field name="label_printer"/>
+                        <field name="label_template"/>
+                        <field name="number_of_labels"/>
+                    </group>
+                    <footer>
+                        <button name="print_labels" type="object" string="Print labels"
+                                class="oe_highlight"/>
+                        or
+                        <button string="Exit" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Wizard window action -->
+        <record id="act_print_mrp_labels" model="ir.actions.act_window">
+            <field name="name">Manufacturing Labels</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.label_printer.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</openerp>

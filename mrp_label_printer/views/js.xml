@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Add js file -->
+        <template id="assets_backend" name="mrp_label_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/mrp_label_printer/static/src/js/printer.js"/>
+            </xpath>
+        </template>
+
+        <!-- Define client action -->
+        <record id="action_label_printer" model="ir.actions.client">
+            <field name="name">MRP Label Printer</field>
+            <field name="tag">label_printer</field>
+        </record>
+    </data>
+</openerp>

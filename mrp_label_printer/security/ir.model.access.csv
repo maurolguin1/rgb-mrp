@@ -1,0 +1,9 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+mrp_printer_manager,Mrp printer manager,model_mrp_label_printer,mrp.group_mrp_manager,1,1,1,1
+mrp_printer_user,Mrp printer user,model_mrp_label_printer,mrp.group_mrp_user,1,0,0,0
+mrp_template_manager,Mrp printer template manager,model_mrp_label_template,mrp.group_mrp_manager,1,1,1,1
+mrp_template_user,Mrp printer template user,model_mrp_label_template,mrp.group_mrp_user,1,0,0,0
+mrp_protocol_manager,Mrp label protocol manager,model_mrp_label_protocol,mrp.group_mrp_manager,1,1,1,1
+mrp_protocol_user,Mrp label protocol user,model_mrp_label_protocol,mrp.group_mrp_user,1,0,0,0
+mrp_printer_params_manager,Mrp printer params manager,model_mrp_label_printer_params,mrp.group_mrp_manager,1,1,1,1
+mrp_printer_params_user,Mrp printer params user,model_mrp_label_printer_params,mrp.group_mrp_user,1,0,0,0

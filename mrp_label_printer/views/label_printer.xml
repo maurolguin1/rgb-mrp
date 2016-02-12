@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Main label menu -->
+        <menuitem name="Label Printer" id="main_label_printer_menu" parent="mrp.menu_mrp_configuration"/>
+
+        <!-- Label printer action and menu -->
+        <record id="label_printer_action" model="ir.actions.act_window">
+            <field name="name">Label Printer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mrp.label_printer</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Label Printers" action="label_printer_action" id="label_printer_menu" parent="main_label_printer_menu"/>
+
+        <!-- Label printer form and tree view -->
+        <record id="label_printer_tree_view" model="ir.ui.view">
+            <field name="name">label.printer.tree</field>
+            <field name="model">mrp.label_printer</field>
+            <field name="arch" type="xml">
+                <tree string="Label printers">
+                    <field name="name"/>
+                    <field name="protocol_id"/>
+                    <field name="proxy_url"/>
+                    <field name="location"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="label_printer_form_view" model="ir.ui.view">
+            <field name="name">label.printer.form</field>
+            <field name="model">mrp.label_printer</field>
+            <field name="arch" type="xml">
+                <form string="Label printers">
+                    <sheet>
+                        <h1 class="oe_title">
+                            <field name="name"/>
+                        </h1>
+                        <group>
+                            <field name="protocol_id"/>
+                            <field name="location"/>
+                            <field name="proxy_url"/>
+                        </group>
+                        <separator string="Parameters"/>
+                        <field name="params_ids">
+                            <tree string="Parameters" editable="bottom">
+                                <field name="name"/>
+                                <field name="value"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
