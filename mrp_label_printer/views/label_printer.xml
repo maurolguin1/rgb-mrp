@@ -13,7 +13,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem name="Label Printers" action="label_printer_action" id="label_printer_menu" parent="main_label_printer_menu"/>
+        <menuitem name="Label Printers" action="label_printer_action" id="label_printer_menu"
+                  parent="main_label_printer_menu"/>
 
         <!-- Label printer form and tree view -->
         <record id="label_printer_tree_view" model="ir.ui.view">

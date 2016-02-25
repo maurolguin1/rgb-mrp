@@ -38,11 +38,13 @@ This module is designed to be installed on the *main Odoo server*. On the *PosBo
     'data': [
         'security/ir.model.access.csv',
         'views/js.xml',
-        'wizard/label_printer_wizard.xml',
+        'wizard/mrp_printer_wizard.xml',
+        'wizard/lot_printer_wizard.xml',
         'views/label_printer.xml',
         'views/label_template.xml',
         'views/res_users.xml',
         'views/mrp_production.xml',
+        'views/serial_number.xml',
     ],
 
     'demo': [

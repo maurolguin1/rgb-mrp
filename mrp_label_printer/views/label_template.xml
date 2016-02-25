@@ -10,7 +10,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem name="Label Templates" action="label_template_action" id="label_template_menu" parent="main_label_printer_menu"/>
+        <menuitem name="Label Templates" action="label_template_action" id="label_template_menu"
+                  parent="main_label_printer_menu"/>
 
         <!-- Label template form and tree view -->
         <record id="label_template_tree_view" model="ir.ui.view">
@@ -43,6 +44,7 @@
                             </page>
                             <page string="Filters">
                                 <group>
+                                    <field name="type"/>
                                     <field name="product_id"/>
                                     <field name="category_id"/>
                                 </group>

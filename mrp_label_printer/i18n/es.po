@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-09 07:49+0000\n"
-"PO-Revision-Date: 2016-02-09 07:49+0000\n"
+"POT-Creation-Date: 2016-02-24 16:53+0000\n"
+"PO-Revision-Date: 2016-02-24 16:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 
 #. module: mrp_label_printer
 #: field:mrp.label_printer,create_uid:0
+#: field:mrp.label_printer.lot.wizard,create_uid:0
 #: field:mrp.label_printer.params,create_uid:0
 #: field:mrp.label_printer.wizard,create_uid:0
 #: field:mrp.label_protocol,create_uid:0
@@ -26,6 +27,7 @@ msgstr "Creado por"
 
 #. module: mrp_label_printer
 #: field:mrp.label_printer,create_date:0
+#: field:mrp.label_printer.lot.wizard,create_date:0
 #: field:mrp.label_printer.params,create_date:0
 #: field:mrp.label_printer.wizard,create_date:0
 #: field:mrp.label_protocol,create_date:0
@@ -34,6 +36,7 @@ msgid "Created on"
 msgstr "Creado el"
 
 #. module: mrp_label_printer
+#: view:mrp.label_printer.lot.wizard:mrp_label_printer.mrp_label_lot_wizard_view
 #: view:mrp.label_printer.wizard:mrp_label_printer.mrp_label_wizard_view
 msgid "Exit"
 msgstr "Salir"
@@ -45,6 +48,7 @@ msgstr "Filtros"
 
 #. module: mrp_label_printer
 #: field:mrp.label_printer,id:0
+#: field:mrp.label_printer.lot.wizard,id:0
 #: field:mrp.label_printer.params,id:0
 #: field:mrp.label_printer.wizard,id:0
 #: field:mrp.label_protocol,id:0
@@ -65,6 +69,7 @@ msgid "Label Printers"
 msgstr "Impresoras de Etiquetas"
 
 #. module: mrp_label_printer
+#: view:mrp.label_printer.lot.wizard:mrp_label_printer.mrp_label_lot_wizard_view
 #: view:mrp.label_printer.wizard:mrp_label_printer.mrp_label_wizard_view
 msgid "Label Printing"
 msgstr "Impresión etiquetas"
@@ -76,6 +81,7 @@ msgid "Label Templates"
 msgstr "Plantillas de etiquetas"
 
 #. module: mrp_label_printer
+#: field:mrp.label_printer.lot.wizard,label_printer:0
 #: field:mrp.label_printer.wizard,label_printer:0
 msgid "Label printer"
 msgstr "Impresora Etiquetas"
@@ -92,6 +98,7 @@ msgid "Label printers"
 msgstr "Impresoras de Etiquetas"
 
 #. module: mrp_label_printer
+#: field:mrp.label_printer.lot.wizard,label_template:0
 #: field:mrp.label_printer.wizard,label_template:0
 msgid "Label template"
 msgstr "Plantilla de etiquetas"
@@ -104,11 +111,13 @@ msgstr "Plantillas de etiquetas"
 
 #. module: mrp_label_printer
 #: view:mrp.production:mrp_label_printer.label_printer_mrp_production_form
+#: view:stock.production.lot:mrp_label_printer.label_printer_mrp_lot_form
 msgid "Labels"
 msgstr "Etiquetas"
 
 #. module: mrp_label_printer
 #: field:mrp.label_printer,write_uid:0
+#: field:mrp.label_printer.lot.wizard,write_uid:0
 #: field:mrp.label_printer.params,write_uid:0
 #: field:mrp.label_printer.wizard,write_uid:0
 #: field:mrp.label_protocol,write_uid:0
@@ -118,6 +127,7 @@ msgstr "Última actualización por"
 
 #. module: mrp_label_printer
 #: field:mrp.label_printer,write_date:0
+#: field:mrp.label_printer.lot.wizard,write_date:0
 #: field:mrp.label_printer.params,write_date:0
 #: field:mrp.label_printer.wizard,write_date:0
 #: field:mrp.label_protocol,write_date:0
@@ -169,6 +179,7 @@ msgid "Name"
 msgstr "Nombre"
 
 #. module: mrp_label_printer
+#: field:mrp.label_printer.lot.wizard,number_of_labels:0
 #: field:mrp.label_printer.wizard,number_of_labels:0
 msgid "No. labels"
 msgstr "No. etiquetas"
@@ -185,20 +196,24 @@ msgstr "ID Paráms"
 
 #. module: mrp_label_printer
 #: view:mrp.production:mrp_label_printer.label_printer_mrp_production_form
+#: view:stock.production.lot:mrp_label_printer.label_printer_mrp_lot_form
 msgid "Print"
 msgstr "Imprimir"
 
 #. module: mrp_label_printer
+#: view:mrp.label_printer.lot.wizard:mrp_label_printer.mrp_label_lot_wizard_view
 #: view:mrp.label_printer.wizard:mrp_label_printer.mrp_label_wizard_view
 msgid "Print labels"
 msgstr "Imprimir etiquetas"
 
 #. module: mrp_label_printer
+#: view:mrp.label_printer.lot.wizard:mrp_label_printer.mrp_label_lot_wizard_view
 #: view:mrp.label_printer.wizard:mrp_label_printer.mrp_label_wizard_view
 msgid "Print product labels"
 msgstr "Imprimir etiquetas de producto"
 
 #. module: mrp_label_printer
+#: field:mrp.label_printer.lot.wizard,product:0
 #: field:mrp.label_printer.wizard,product:0
 #: field:mrp.label_template,product_id:0
 msgid "Product"
@@ -227,6 +242,21 @@ msgid "Proxy url"
 msgstr "URL Proxy"
 
 #. module: mrp_label_printer
+#: view:mrp.label_printer.lot.wizard:mrp_label_printer.mrp_label_lot_wizard_view
+msgid "Serial Number"
+msgstr "Número de serie"
+
+#. module: mrp_label_printer
+#: model:ir.actions.act_window,name:mrp_label_printer.act_print_lot_labels
+msgid "Serial Number Labels"
+msgstr "Etiquetas Números de Serie"
+
+#. module: mrp_label_printer
+#: field:mrp.label_printer.lot.wizard,serial_number:0
+msgid "Serial number"
+msgstr "Número de serie"
+
+#. module: mrp_label_printer
 #: view:mrp.label_template:mrp_label_printer.label_template_form_view
 #: field:mrp.label_template,template_code:0
 msgid "Template"
@@ -253,6 +283,12 @@ msgid "Value"
 msgstr "Valor"
 
 #. module: mrp_label_printer
+#: view:mrp.label_printer.lot.wizard:mrp_label_printer.mrp_label_lot_wizard_view
 #: view:mrp.label_printer.wizard:mrp_label_printer.mrp_label_wizard_view
 msgid "or"
 msgstr "o"
+
+#. module: mrp_label_printer
+#: field:mrp.label_template,type:0
+msgid "Type"
+msgstr "Tipo"

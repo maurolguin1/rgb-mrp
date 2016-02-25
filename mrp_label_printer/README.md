@@ -28,8 +28,11 @@ Odoo email templates: *${object.field}*
 Usage
 -----
 
-In the manufacturing orders form view, a new button is added, *Print Labels*, that allows
+In the *manufacturing orders* form view, a new button is added, *Print Labels*, that allows
 to print labels for the manufactured product.
+
+Labels can also be printed for *serial numbers*, pushing the button *Print Labels*, in the
+serial numbers form view.
 
 Credits
 =======
