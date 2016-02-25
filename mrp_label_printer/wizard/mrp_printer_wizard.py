@@ -45,7 +45,7 @@ class LabelPrinterWizard(models.TransientModel):
         params = self.label_printer.get_params()
         # Render label template
         template_var = {}
-        template_var['$[number_of_labels]'] = format(self.number_of_labels - 1, '04')
+        template_var['$[number_of_labels]'] = format(self.number_of_labels, '04')
         params['data'] = self.label_template.render_template(template_var, 'mrp.production', self.manufacture_order.id)
         # Return client action
         result = {
