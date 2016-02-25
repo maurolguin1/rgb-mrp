@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-24 16:53+0000\n"
-"PO-Revision-Date: 2016-02-24 16:53+0000\n"
+"POT-Creation-Date: 2016-02-25 09:44+0000\n"
+"PO-Revision-Date: 2016-02-25 09:44+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -171,6 +171,11 @@ msgid "Manufacturing Order"
 msgstr "Orden de producción"
 
 #. module: mrp_label_printer
+#: selection:mrp.label_template,type:0
+msgid "Manufacturing Orders"
+msgstr "Órdenes de producción"
+
+#. module: mrp_label_printer
 #: field:mrp.label_printer,name:0
 #: field:mrp.label_printer.params,name:0
 #: field:mrp.label_protocol,name:0
@@ -252,6 +257,11 @@ msgid "Serial Number Labels"
 msgstr "Etiquetas Números de Serie"
 
 #. module: mrp_label_printer
+#: selection:mrp.label_template,type:0
+msgid "Serial Numbers"
+msgstr "Números de serie"
+
+#. module: mrp_label_printer
 #: field:mrp.label_printer.lot.wizard,serial_number:0
 msgid "Serial number"
 msgstr "Número de serie"
@@ -273,6 +283,11 @@ msgid "This field is used to define the proxy url - HTTP://IP:PORT"
 msgstr "Este campo se utiliza para definir la URL del proxy - HTTP://IP:PORT"
 
 #. module: mrp_label_printer
+#: field:mrp.label_template,type:0
+msgid "Type"
+msgstr "Tipo"
+
+#. module: mrp_label_printer
 #: model:ir.model,name:mrp_label_printer.model_res_users
 msgid "Users"
 msgstr "Usuarios"
@@ -287,8 +302,3 @@ msgstr "Valor"
 #: view:mrp.label_printer.wizard:mrp_label_printer.mrp_label_wizard_view
 msgid "or"
 msgstr "o"
-
-#. module: mrp_label_printer
-#: field:mrp.label_template,type:0
-msgid "Type"
-msgstr "Tipo"
