@@ -3,6 +3,9 @@
 
 from openerp import fields, models, api
 
+CONTROL_CODES = {'<SOH>': 1, '<STX>': 2, '<ACK>': 6, '<LF>': 10, '<CR>': 13,
+                 '<XON>': 17, '<XOFF>': 19, '<NAK>': 21, '<ESC>': 27}
+
 
 class LabelTemplate(models.Model):
     _name = 'mrp.label_template'
@@ -24,4 +27,8 @@ class LabelTemplate(models.Model):
         template = template.get(rec_id, '')
         for param, value in params.iteritems():
             template = template.replace(param, value)
+
+        # Convert control codes
+        for code, value in CONTROL_CODES.iteritems():
+            template = template.replace(code, chr(value))
         return template

@@ -12,16 +12,17 @@ class LotPrinterWizard(models.TransientModel):
 
     serial_number = fields.Many2one(comodel_name='stock.production.lot', default=_default_sn, readonly=True)
     product = fields.Many2one(comodel_name='product.product', readonly=True)
-    label_printer = fields.Many2one(comodel_name='mrp.label_printer')
+    label_printer = fields.Many2one(comodel_name='mrp.label_printer',
+                                    default=lambda self: self.env.user.label_printer_id)
     label_template = fields.Many2one(comodel_name='mrp.label_template')
     number_of_labels = fields.Integer(string='No. labels', default=1)
 
-    @api.onchange('serial_number')
+    @api.onchange('label_printer')
     def _set_default(self):
         # Assign wizard default values
         self.product = self.serial_number.product_id
-        self.label_printer = self.env.user.label_printer_id
         # Add domain to label_templates
+        self.label_template = None
         labels = [l.id for l in self.env['mrp.label_template'].search(
             ['&', '|', ('type', '=', 'stock.production.lot'), ('type', '=', False),
              '&', ('protocol_id.id', '=', self.label_printer.protocol_id.id),
