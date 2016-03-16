@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # See README file for full copyright and licensing details.
 
+from unidecode import unidecode
 from openerp import fields, models, api
 
 CONTROL_CODES = {'<SOH>': 1, '<STX>': 2, '<ACK>': 6, '<LF>': 10, '<CR>': 13, '<XON>': 17, '<XOFF>': 19, '<NAK>': 21, '<ESC>': 27}
@@ -31,5 +32,6 @@ class LabelTemplate(models.Model):
         for code, value in CONTROL_CODES.iteritems():
             template = template.replace(code, chr(value))
         # Encode unsupported unicode data
+        template = unidecode(template)
         template = template.encode('ascii', 'ignore')
         return template

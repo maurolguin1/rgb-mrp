@@ -22,6 +22,7 @@
     'name': "MRP Label Printer",
     'version': '1.0',
     'depends': ['mrp'],
+    'external_dependencies': { 'python': ['unidecode'], },
     'license': 'AGPL-3',
     'author': "RGB Consulting SL",
     'website': "http://www.rgbconsulting.com",
