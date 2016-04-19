@@ -39,7 +39,8 @@ class LabelPrinterWizard(models.TransientModel):
     @api.onchange('label_template')
     def _number_of_labels(self):
         if self.label_template:
-            self.number_of_labels = ceil(self.product_quantity / self.label_template.product_quantity)
+            self.number_of_labels = ceil(self.product_quantity * self.label_template.label_quantity /
+                                         self.label_template.product_quantity)
 
     @api.multi
     def print_labels(self):

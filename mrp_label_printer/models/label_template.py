@@ -12,7 +12,8 @@ class LabelTemplate(models.Model):
 
     name = fields.Char(required=True)
     protocol_id = fields.Many2one(string='Protocol', comodel_name='mrp.label_protocol')
-    product_quantity = fields.Integer(help='The quantity of product for each label', default=1)
+    product_quantity = fields.Integer(help='The quantity of product for label quantity', default=1)
+    label_quantity = fields.Integer(help='Number of labels for product quantity', default=1)
     template_code = fields.Text(string='Template')
     product_id = fields.Many2one(string='Product', comodel_name='product.product')
     category_id = fields.Many2one(string='Product Category', comodel_name='product.category')

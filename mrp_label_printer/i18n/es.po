@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-25 09:44+0000\n"
-"PO-Revision-Date: 2016-02-25 09:44+0000\n"
+"PO-Revision-Date: 2016-04-19 09:44+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -236,6 +236,11 @@ msgid "Product quantity"
 msgstr "Cantidad de producto"
 
 #. module: mrp_label_printer
+#: field:mrp.label_template,label_quantity:0
+msgid "Label quantity"
+msgstr "Cantidad de etiquetas"
+
+#. module: mrp_label_printer
 #: field:mrp.label_printer,protocol_id:0
 #: field:mrp.label_template,protocol_id:0
 msgid "Protocol"
@@ -274,8 +279,13 @@ msgstr "Plantilla"
 
 #. module: mrp_label_printer
 #: help:mrp.label_template,product_quantity:0
-msgid "The quantity of product for each label"
-msgstr "La cantidad de producto por cada etiqueta"
+msgid "The quantity of product for label quantity"
+msgstr "La cantidad de producto por cantidad de etiqueta"
+
+#. module: mrp_label_printer
+#: help:mrp.label_template,label_quantity:0
+msgid "Number of labels for product quantity"
+msgstr "Número de etiquetas por cantidad de producto"
 
 #. module: mrp_label_printer
 #: help:mrp.label_printer,proxy_url:0

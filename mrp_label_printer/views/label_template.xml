@@ -36,7 +36,14 @@
                         </h1>
                         <group>
                             <field name="protocol_id"/>
-                            <field name="product_quantity"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="product_quantity"/>
+                            </group>
+                            <group>
+                                <field name="label_quantity"/>
+                            </group>
                         </group>
                         <notebook>
                             <page string="Template">
